@@ -7,7 +7,7 @@ module.exports = defineConfig({
     },
     viewportWidth: 1000,
     viewportHeight: 660,
-    baseUrl:"https://demoqa.com",
+    url:"https://katalon-demo-cura.herokuapp.com/",
   },
   
 });

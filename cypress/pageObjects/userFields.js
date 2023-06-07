@@ -1,18 +1,11 @@
-class GridPage {
-    static get url() {
-      return "/selectable";
-    }
+class UserFields {
   
     static visit() {
       cy.visit(this.url);
     }
   
-    static clickGridItems() {
-      cy.get("#demo-tab-grid").click();
-      cy.get(".list-group-item").contains("Two").click();
-      cy.get(".list-group-item").contains("Four").click();
-      cy.get(".list-group-item").contains("Six").click();
-      cy.get(".list-group-item").contains("Eight").click();
+    static makeAppointmentButton() {
+      cy.click('#btn-make-appointment');
     }
   
   
@@ -33,4 +26,4 @@ class GridPage {
         cy.get('#row3 > .list-group-item:not(.active)').should('contain', 'Nine');
       } 
   }
-  export default GridPage;
+  export default UserFields;

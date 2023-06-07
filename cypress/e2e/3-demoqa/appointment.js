@@ -10,20 +10,19 @@
 // what makes it such an awesome testing tool,
 // please read our getting started guide:
 // https://on.cypress.io/introduction-to-cypress
-import GridPage from "../../pageObjects/gridPage";
+import UserFields from "../../pageObjects/userFields";
 
 describe('Selectable Page', () => {
   beforeEach(() => {
-    GridPage.visit();
+    UserFields.visit();
   });
 
-  it("Validate Selected Items", () => {
-    GridPage.clickGridItems();
-    GridPage.validateSelected();
+  it("Make appointment", () => {
+    UserFields.makeAppointmentButton();
   });
 
-  it("Validate Not Selected Items", () => {
+ /* it("Validate Not Selected Items", () => {
     GridPage.clickGridItems();
     GridPage.validateNotSelected();
-  });
+  });*/
 });

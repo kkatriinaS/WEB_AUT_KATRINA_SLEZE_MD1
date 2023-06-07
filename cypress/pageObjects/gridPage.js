@@ -7,21 +7,22 @@ class GridPage {
       cy.visit(this.url);
     }
   
-        static clickGridItems() {
-          cy.get("#demo-tab-grid").click();
-          cy.get(".list-group-item").contains("Two").click();
-          cy.get(".list-group-item").contains("Four").click();
-          cy.get(".list-group-item").contains("Six").click();
-          cy.get(".list-group-item").contains("Eight").click();
+    static clickGridItems() {
+      cy.get("#demo-tab-grid").click();
+      cy.get(".list-group-item").contains("Two").click();
+      cy.get(".list-group-item").contains("Four").click();
+      cy.get(".list-group-item").contains("Six").click();
+      cy.get(".list-group-item").contains("Eight").click();
     }
   
   
     static validateSelected() {
-      cy.get('#row1 > .list-group-item.active)').should('contain', 'Two');
-      cy.get('#row2 > .list-group-item.active)').should('contain', 'Four');
-      cy.get('#row2 > .list-group-item.active)').should('contain', 'Six');
-      cy.get('#row3 > .list-group-item.active)').should('contain', 'Eight');
+      cy.get('#row1 > .list-group-item').contains('Two').should('have.class', 'active list-group-item-action');
+      cy.get('#row2 > .list-group-item').contains('Four').should('have.class', 'active list-group-item-action');
+      cy.get('#row2 > .list-group-item').contains('Six').should('have.class', 'active list-group-item-action');
+      cy.get('#row3 > .list-group-item').contains('Eight').should('have.class', 'active list-group-item-action');
     }
+    
  
   
     static validateNotSelected() {

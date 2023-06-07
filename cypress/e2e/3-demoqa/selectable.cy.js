@@ -17,7 +17,7 @@ describe('Selectable Page', () => {
     GridPage.visit();
   });
 
-  it("Grid Items", () => {
+  it("Validate Selected Items", () => {
     GridPage.clickGridItems();
     GridPage.validateSelected();
   });
